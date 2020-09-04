@@ -8,8 +8,8 @@ const Login = () => {
   return (
     <Layout style={styles.container} level="1">
       <ImageBackground source={BackgroundLogin} style={styles.image}>
-        <Image source={LogoVertical} style={{ width: 182, height: 186 }} />
-        <Text style={styles.title}>Acessar</Text>
+        <Image source={LogoVertical} style={{ width: 205, height: 180 }} />
+        <Text style={styles.title} status="primary">cadastrar</Text>
       </ImageBackground>
     </Layout>
   );
@@ -34,8 +34,9 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 30,
-    color: '#F06C63',
     marginTop: 20,
+    textTransform: "uppercase",
+    fontWeight: "700",
   },
 });
 
