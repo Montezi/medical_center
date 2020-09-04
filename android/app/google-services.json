@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "564109786367",
+    "firebase_url": "https://medical-talk.firebaseio.com",
+    "project_id": "medical-talk",
+    "storage_bucket": "medical-talk.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:564109786367:android:efec85b1f24c0852c820ca",
+        "android_client_info": {
+          "package_name": "com.medical_talk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "564109786367-2dkblc7ucbt312rg87ju8osv600kdfvu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.medical_talk",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "564109786367-rvkjflvder7bbraid6l3bsc6hrv06c2n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUDy_-CQy7HaVtMRPLAqsc8Woy18fcWHE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "564109786367-rvkjflvder7bbraid6l3bsc6hrv06c2n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
