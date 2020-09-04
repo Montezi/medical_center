@@ -1,17 +1,15 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
-import {SafeAreaView, View, Text} from 'react-native';
+import * as eva from '@eva-design/eva';
+import { ApplicationProvider } from '@ui-kitten/components';
+import { default as theme } from './custom-theme.json';
+import Routes from './src/pages/routes';
 
 const App = () => {
   return (
-    <SafeAreaView
-      style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <View>
-        <Text style={{fontWeight: 'bold', fontSize: 20}}>
-          {' '}
-          Hello Medical Talk!{' '}
-        </Text>
-      </View>
-    </SafeAreaView>
+    <ApplicationProvider {...eva} theme={{ ...eva.light, ...theme }}>
+      <Routes />
+    </ApplicationProvider>
   );
 };
 
