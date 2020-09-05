@@ -1,5 +1,6 @@
 /* eslint-disable no-use-before-define */
 import React from 'react';
+import { useNavigation } from '@react-navigation/native';
 import {
   StyleSheet,
   ImageBackground,
@@ -8,7 +9,7 @@ import {
   NativeModules,
 } from 'react-native';
 
-import { Layout, Text } from '@ui-kitten/components';
+import { Layout, Text, Button, ButtonGroup } from '@ui-kitten/components';
 import { BackgroundLogin, LogoVertical } from '../../assets';
 
 const { StatusBarManager } = NativeModules;
@@ -16,13 +17,26 @@ const { StatusBarManager } = NativeModules;
 const STATUSBAR_HEIGHT = Platform.OS === 'ios' ? 40 : StatusBarManager.HEIGHT;
 
 const Login = () => {
+  const navigation = useNavigation();
+
   return (
     <Layout style={styles.container} level="1">
       <ImageBackground source={BackgroundLogin} style={styles.image}>
         <Image source={LogoVertical} style={{ width: 205, height: 180 }} />
         <Text style={styles.title} status="primary">
-          cadastrar
+          acessar
         </Text>
+
+        <ButtonGroup style={styles.button} status="success">
+          <Button
+            style={styles.containerButton}
+            onPress={() => {
+              navigation.navigate('Home');
+            }}
+          >
+            <Text style={styles.textButton}>entrar</Text>
+          </Button>
+        </ButtonGroup>
       </ImageBackground>
     </Layout>
   );
@@ -51,6 +65,20 @@ const styles = StyleSheet.create({
     marginTop: 20,
     textTransform: 'uppercase',
     fontWeight: '700',
+  },
+  textButton: {
+    fontSize: 25,
+    textTransform: 'uppercase',
+    color: '#FFFFFF',
+    fontWeight: 'bold',
+  },
+  button: {
+    marginTop: 20,
+  },
+  containerButton: {
+    width: 317,
+    height: 53,
+    borderRadius: 12,
   },
 });
 
