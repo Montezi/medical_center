@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
     fontSize: 25,
     textTransform: 'uppercase',
     color: '#FFFFFF',
-    fontWeight: 'bold',
+    fontFamily: 'AcuminPro-Bold',
   },
   button: {
     marginTop: 20,
