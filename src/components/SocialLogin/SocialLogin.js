@@ -5,7 +5,7 @@ import { useNavigation } from '@react-navigation/native';
 import { StyleSheet, Image } from 'react-native';
 
 import { Layout, Text, Button } from '@ui-kitten/components';
-import { google, facebook } from '../assets';
+import { google, facebook } from '../../assets';
 
 const SocialLogin = ({ register }) => {
   const navigation = useNavigation();
