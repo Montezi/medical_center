@@ -1,32 +1,33 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-// import { createStackNavigator } from '@react-navigation/stack';
+import { createStackNavigator } from '@react-navigation/stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
+import { useSelector } from 'react-redux';
 
 import Home from './Home';
-// import Login from './Login';
+import Login from './Login';
 import DrawerContent from './DrawerContent';
 import Schedule from './Schedule';
 import Hospital from './Hospital';
 import History from './History';
 import Doctor from './Doctor';
 
-// const Stack = createStackNavigator();
+const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
 
-// const AppNavigator = () => {
-//   return (
-//     <Stack.Navigator>
-//       <Stack.Screen
-//         name="Login"
-//         component={Login}
-//         options={{ headerShown: false }}
-//       />
-//       <Stack.Screen name="Home" component={Home} />
-//     </Stack.Navigator>
-//   );
-// };
+const AppNavigator = () => {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        name="Login"
+        component={Login}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen name="Home" component={Home} />
+    </Stack.Navigator>
+  );
+};
 
 const MainNavigator = () => {
   return (
@@ -45,5 +46,10 @@ const MainNavigator = () => {
 };
 
 export default function Routes() {
-  return <NavigationContainer>{MainNavigator()}</NavigationContainer>;
+  const { authenticate } = useSelector((store) => store.userReducer);
+  return (
+    <NavigationContainer>
+      {authenticate ? MainNavigator() : AppNavigator()}
+    </NavigationContainer>
+  );
 }

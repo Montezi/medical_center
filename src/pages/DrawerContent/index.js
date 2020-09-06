@@ -1,8 +1,10 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import { Image, SafeAreaView, TouchableOpacity } from 'react-native';
 
 import { Drawer, DrawerItem, Text, Icon, Layout } from '@ui-kitten/components';
+import { userActions } from '../../store/ducks/user.ducks';
 
 import {
   logout,
@@ -35,7 +37,14 @@ const Hospital = () => <Image source={maleta} style={styles.image} />;
 const Logout = () => <Image source={logout} style={styles.image} />;
 
 const DrawerContent = ({ ...props }) => {
+  const dispatch = useDispatch();
+  const { setAuthenticate } = userActions;
+
   const [selectedIndex, setSelectedIndex] = React.useState(null);
+
+  const logoutFunc = () => {
+    dispatch(setAuthenticate(false));
+  };
 
   return (
     <SafeAreaView style={styles.container}>
@@ -80,7 +89,7 @@ const DrawerContent = ({ ...props }) => {
         <DrawerItem
           title={(evaProps) => <Text {...evaProps}>SAIR</Text>}
           accessoryLeft={Logout}
-          onPress={() => props.navigation.closeDrawer()}
+          onPress={logoutFunc}
           style={styles.item}
         />
       </Drawer>
