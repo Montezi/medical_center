@@ -7,6 +7,8 @@ import logout from './logout.png';
 import maleta from './maleta.png';
 import pasta from './pasta.png';
 import avatar from './avatar.png';
+import facebook from './facebook.png';
+import google from './google.png';
 
 export {
   LogoHorizontal,
@@ -18,4 +20,6 @@ export {
   pasta,
   maleta,
   avatar,
+  google,
+  facebook,
 };
