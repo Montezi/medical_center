@@ -1,6 +1,5 @@
 /* eslint-disable no-use-before-define */
 import React from 'react';
-import { useNavigation } from '@react-navigation/native';
 import {
   StyleSheet,
   ImageBackground,
@@ -8,8 +7,10 @@ import {
   Platform,
   NativeModules,
 } from 'react-native';
+import { useDispatch } from 'react-redux';
 
 import { Layout, Text, Button, ButtonGroup } from '@ui-kitten/components';
+import { userActions } from '../../store/ducks/user.ducks';
 import { BackgroundLogin, LogoVertical } from '../../assets';
 
 const { StatusBarManager } = NativeModules;
@@ -17,7 +18,8 @@ const { StatusBarManager } = NativeModules;
 const STATUSBAR_HEIGHT = Platform.OS === 'ios' ? 40 : StatusBarManager.HEIGHT;
 
 const Login = () => {
-  const navigation = useNavigation();
+  const dispatch = useDispatch();
+  const { setAuthenticate } = userActions;
 
   return (
     <Layout style={styles.container} level="1">
@@ -31,7 +33,7 @@ const Login = () => {
           <Button
             style={styles.containerButton}
             onPress={() => {
-              navigation.navigate('Home');
+              dispatch(setAuthenticate(true));
             }}
           >
             <Text style={styles.textButton}>entrar</Text>
