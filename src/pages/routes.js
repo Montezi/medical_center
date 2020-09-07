@@ -13,6 +13,7 @@ import Schedule from './Schedule';
 import Hospital from './Hospital';
 import History from './History';
 import Doctor from './Doctor';
+import DetailSchedule from './DetailSchedule';
 
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -47,6 +48,7 @@ const MainNavigator = () => {
       <Drawer.Screen name="History" component={History} />
       <Drawer.Screen name="Doctor" component={Doctor} />
       <Drawer.Screen name="Hospital" component={Hospital} />
+      <Drawer.Screen name="DetailSchedule" component={DetailSchedule} />
     </Drawer.Navigator>
   );
 };

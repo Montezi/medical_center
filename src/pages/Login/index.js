@@ -1,7 +1,7 @@
 /* eslint-disable no-return-assign */
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable no-use-before-define */
-import React from 'react';
+import React, { useRef } from 'react';
 import {
   Platform,
   NativeModules,
@@ -31,6 +31,8 @@ const STATUSBAR_HEIGHT = Platform.OS === 'ios' ? 40 : StatusBarManager.HEIGHT;
 const Login = () => {
   const dispatch = useDispatch();
   const { setUser, setAuthenticate } = userActions;
+
+  const dropDownAlertRef = useRef();
 
   const navigation = useNavigation();
 
@@ -114,7 +116,7 @@ const Login = () => {
           </TouchableHighlight>
         </S.BoxRow>
       </ImageBackground>
-      <DropdownAlert ref={(ref) => (dropDownAlertRef = ref)} />
+      <DropdownAlert ref={dropDownAlertRef} />
     </S.Layout>
   );
 };
