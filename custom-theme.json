@@ -74,5 +74,6 @@
   "color-danger-transparent-400": "rgba(242, 242, 242, 0.32)",
   "color-danger-transparent-500": "rgba(242, 242, 242, 0.4)",
   "color-danger-transparent-600": "rgba(242, 242, 242, 0.48)",
-  "text-basic-color": "$color-success-500"
+  "text-basic-color": "$color-success-500",
+  "text-hint-color": "$color-success-500"
 }
