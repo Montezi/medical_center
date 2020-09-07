@@ -13,7 +13,7 @@ const TYPES = {
 const INITIAL_STATE = {
   user: {},
   error: '',
-  authenticate: true,
+  authenticate: false,
   loading: false,
 };
 

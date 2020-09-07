@@ -1,10 +1,30 @@
-import React from 'react';
-import { View } from 'react-native';
+/* eslint-disable no-async-promise-executor */
+import auth from '@react-native-firebase/auth';
 
-// import { Container } from './styles';
-
-const services = () => {
-  return <View />;
+export const login = (values) => {
+  const { email, password } = values;
+  return new Promise(async (resolve, reject) => {
+    auth()
+      .signInWithEmailAndPassword(email, password)
+      .then((res) => {
+        resolve(res);
+      })
+      .catch((error) => {
+        reject(error);
+      });
+  });
 };
 
-export default services;
+export const register = (values) => {
+  const { email, password } = values;
+  return new Promise(async (resolve, reject) => {
+    auth()
+      .createUserWithEmailAndPassword(email, password)
+      .then((res) => {
+        resolve(res);
+      })
+      .catch((error) => {
+        reject(error);
+      });
+  });
+};
