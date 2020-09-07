@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable no-use-before-define */
-import React from 'react';
+import React, { useRef } from 'react';
 import {
   Platform,
   NativeModules,
@@ -32,6 +32,8 @@ const Login = () => {
 
   const navigation = useNavigation();
 
+  const dropDownAlertRef = useRef();
+
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
 
@@ -57,7 +59,7 @@ const Login = () => {
         message = 'Senha é inválida, no mínimo 6 caracteres';
       }
 
-      dropDownAlertRef.alertWithType('error', 'Erro', message);
+      dropDownAlertRef.current.alertWithType('error', 'Erro', message);
     }
   };
 
@@ -84,6 +86,7 @@ const Login = () => {
             placeholder="Email"
             value={email}
             onChangeText={(value) => setEmail(value)}
+            keyboardType="email-address"
           />
           <InputComponent
             placeholder="Senha"
@@ -115,7 +118,7 @@ const Login = () => {
 
         <SocialLogin register />
       </ImageBackground>
-      <DropdownAlert ref={(ref) => (dropDownAlertRef = ref)} />
+      <DropdownAlert ref={dropDownAlertRef} />
     </S.Layout>
   );
 };

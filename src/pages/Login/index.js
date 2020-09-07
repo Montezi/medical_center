@@ -32,7 +32,7 @@ const Login = () => {
   const dispatch = useDispatch();
   const { setUser, setAuthenticate } = userActions;
 
-  const dropDownAlertRef = useRef();
+  const dropDownAlertRef = useRef(null);
 
   const navigation = useNavigation();
 
@@ -53,9 +53,10 @@ const Login = () => {
       }
 
       if (err.code === 'auth/wrong-password') {
-        message = 'Senha Errada!';
+        message = 'Usuário ou senha incorretos!';
       }
-      dropDownAlertRef.alertWithType('error', 'Erro', message);
+
+      dropDownAlertRef.current.alertWithType('error', 'Erro', message);
     }
   };
 
@@ -82,6 +83,8 @@ const Login = () => {
             placeholder="Email"
             value={email}
             onChangeText={(value) => setEmail(value)}
+            placeholderStyle={{ color: '#FF0000' }}
+            keyboardType="email-address"
           />
           <InputComponent
             placeholder="Senha"
@@ -116,7 +119,10 @@ const Login = () => {
           </TouchableHighlight>
         </S.BoxRow>
       </ImageBackground>
-      <DropdownAlert ref={dropDownAlertRef} />
+      <DropdownAlert
+        inactiveStatusBarStyle="dark-content"
+        ref={dropDownAlertRef}
+      />
     </S.Layout>
   );
 };

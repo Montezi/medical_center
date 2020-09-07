@@ -17,6 +17,8 @@ import {
 
 import DrawerHeader from '../../components/modules/HeaderDrawer';
 
+import { logoutUser } from '../../services/user.service';
+
 import styles from './styles';
 
 const Header = () => {
@@ -38,12 +40,19 @@ const Logout = () => <Image source={logout} style={styles.image} />;
 
 const DrawerContent = ({ ...props }) => {
   const dispatch = useDispatch();
-  const { setAuthenticate } = userActions;
+  const { setAuthenticate, setUser } = userActions;
 
   const [selectedIndex, setSelectedIndex] = React.useState(null);
 
-  const logoutFunc = () => {
-    dispatch(setAuthenticate(false));
+  const logoutFunc = async () => {
+    try {
+      const sair = await logoutUser();
+      console.log(sair);
+      dispatch(setAuthenticate(false));
+      dispatch(setUser({}));
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (

@@ -28,3 +28,16 @@ export const register = (values) => {
       });
   });
 };
+
+export const logoutUser = () => {
+  return new Promise(async (resolve, reject) => {
+    auth()
+      .signOut()
+      .then(() => {
+        resolve('Logout efetuado com sucesso');
+      })
+      .catch((error) => {
+        reject(error);
+      });
+  });
+};

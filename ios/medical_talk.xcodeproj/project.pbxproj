@@ -24,6 +24,7 @@
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		8EE8E46B8BEF420DB3EEE6FC /* AcuminPro-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 828A562927674583A190798F /* AcuminPro-Italic.otf */; };
 		B3E5C2E75EBC4B27AD26ABCF /* AcuminPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7BC29B91B4A0459597C50FAB /* AcuminPro-Regular.otf */; };
+		D9F1165325069AC600A53121 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D9F1165225069AC600A53121 /* GoogleService-Info.plist */; };
 		FB9F088DE704485D87D2F332 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DC6160A0AA33431FBAE98B75 /* Roboto-Thin.ttf */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +74,7 @@
 		AAB0C337B22D83C88B350244 /* libPods-medical_talk-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-medical_talk-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC0A5E7A226C7C81AF5C0DE4 /* libPods-medical_talk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-medical_talk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC80E279CEDB4800AC0EF405 /* AcuminPro-BoldItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "AcuminPro-BoldItalic.otf"; path = "../src/assets/fonts/AcuminPro-BoldItalic.otf"; sourceTree = "<group>"; };
+		D9F1165225069AC600A53121 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DA6CB5A51718373047507833 /* Pods-medical_talk-medical_talkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-medical_talk-medical_talkTests.release.xcconfig"; path = "Target Support Files/Pods-medical_talk-medical_talkTests/Pods-medical_talk-medical_talkTests.release.xcconfig"; sourceTree = "<group>"; };
 		DC6160A0AA33431FBAE98B75 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Thin.ttf"; path = "../src/assets/fonts/Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -135,6 +137,7 @@
 		13B07FAE1A68108700A75B9A /* medical_talk */ = {
 			isa = PBXGroup;
 			children = (
+				D9F1165225069AC600A53121 /* GoogleService-Info.plist */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -364,6 +367,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				D9F1165325069AC600A53121 /* GoogleService-Info.plist in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				5553C53C594E47289C8ACF30 /* AcuminPro-Bold.otf in Resources */,
 				72615B163EC049A085CAD482 /* AcuminPro-BoldItalic.otf in Resources */,

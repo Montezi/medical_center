@@ -16,6 +16,7 @@ const InputComponent = (props) => {
     <TouchableWithoutFeedback onPress={toggleSecureEntry}>
       <Icon
         {...props}
+        fill="#EE6C63"
         name={secureTextEntry ? 'eye-off' : 'eye'}
       />
     </TouchableWithoutFeedback>
@@ -28,7 +29,8 @@ const InputComponent = (props) => {
     password,
     value,
     onChangeText,
-    autoCompleteType
+    autoCompleteType,
+    keyboardType,
   } = props;
 
   return (
@@ -41,7 +43,7 @@ const InputComponent = (props) => {
         },
         shadowOpacity: 0.18,
         shadowRadius: 1.0,
-        elevation: 0.8,
+        elevation: 1,
       }}
       placeholder={placeholder}
       size={size}
@@ -54,6 +56,9 @@ const InputComponent = (props) => {
         color: '#EE6C63',
         fontFamily: 'Roboto-Thin',
       }}
+      autoCapitalize="none"
+      keyboardType={keyboardType}
+      placeholderTextColor="#EE6C63"
     />
   );
 };
@@ -66,6 +71,7 @@ InputComponent.propTypes = {
   value: PropTypes.string,
   onChangeText: PropTypes.func,
   autoCompleteType: PropTypes.string,
+  keyboardType: PropTypes.string,
 };
 
 InputComponent.defaultProps = {
@@ -75,7 +81,8 @@ InputComponent.defaultProps = {
   password: false,
   value: '',
   onChangeText: () => {},
-  autoCompleteType: "off",
+  autoCompleteType: 'off',
+  keyboardType: 'default',
 };
 
 export default InputComponent;
