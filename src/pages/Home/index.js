@@ -6,6 +6,7 @@ import {
   Image,
   ImageBackground,
   ScrollView,
+  Dimensions,
 } from 'react-native';
 
 import { Layout, Icon, Input } from '@ui-kitten/components';
@@ -19,6 +20,9 @@ import Schedule from '../../components/modules/Schedule';
 const { StatusBarManager } = NativeModules;
 
 const STATUSBAR_HEIGHT = Platform.OS === 'ios' ? 60 : StatusBarManager.HEIGHT;
+
+const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
 
 const Home = () => {
   const navigation = useNavigation();
@@ -37,7 +41,8 @@ const Home = () => {
         source={BackgroundLogin}
         style={{
           flex: 1,
-          width: '100%',
+          width: windowWidth,
+          height: windowHeight,
           resizeMode: 'cover',
         }}
       >

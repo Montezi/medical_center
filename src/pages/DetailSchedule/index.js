@@ -6,6 +6,7 @@ import {
   Image,
   ImageBackground,
   ScrollView,
+  Dimensions,
 } from 'react-native';
 
 import { Layout, Icon, Text, Button } from '@ui-kitten/components';
@@ -23,6 +24,8 @@ import ModalAlert from '../../components/modules/ModalAlert';
 const { StatusBarManager } = NativeModules;
 
 const STATUSBAR_HEIGHT = Platform.OS === 'ios' ? 60 : StatusBarManager.HEIGHT;
+const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
 
 const DetailSchedule = () => {
   const navigation = useNavigation();
@@ -40,7 +43,8 @@ const DetailSchedule = () => {
         source={BackgroundLogin}
         style={{
           flex: 1,
-          width: '100%',
+          width: windowWidth,
+          height: windowHeight,
           resizeMode: 'cover',
         }}
       >
