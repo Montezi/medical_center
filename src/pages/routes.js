@@ -6,6 +6,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import { useSelector } from 'react-redux';
 
 import Home from './Home';
+import Register from './Register';
 import Login from './Login';
 import DrawerContent from './DrawerContent';
 import Schedule from './Schedule';
@@ -22,6 +23,11 @@ const AppNavigator = () => {
       <Stack.Screen
         name="Login"
         component={Login}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Register"
+        component={Register}
         options={{ headerShown: false }}
       />
       <Stack.Screen name="Home" component={Home} />

@@ -1,4 +1,3 @@
-/* eslint-disable no-return-assign */
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable no-use-before-define */
 import React from 'react';
@@ -18,11 +17,10 @@ import { useDispatch } from 'react-redux';
 import { userActions } from '../../store/ducks/user.ducks';
 
 import { BackgroundLogin, LogoVertical } from '../../assets';
-import { login } from '../../services/user.service';
-
+import SocialLogin from '../../components/SocialLogin/SocialLogin';
 import * as S from './styled';
 import InputComponent from '../../components/Input';
-import SocialLogin from '../../components/SocialLogin/SocialLogin';
+import { register } from '../../services/user.service';
 
 const { StatusBarManager } = NativeModules;
 
@@ -41,18 +39,24 @@ const Login = () => {
     setEmail('');
     setPassword('');
     try {
-      const res = await login(values);
+      const res = await register(values);
       dispatch(setUser(res));
       dispatch(setAuthenticate(true));
     } catch (err) {
-      let message = '';
-      if (err.code === 'auth/user-not-found') {
-        message = 'Usuário não encontrado';
+      let message = err;
+      if (err.code === 'auth/email-already-exists') {
+        message = 'Email já existe';
+      }
+      if (err.code === 'auth/email-already-in-use') {
+        message = 'Email já existe';
+      }
+      if (err.code === 'auth/invalid-email') {
+        message = 'Email invalido';
+      }
+      if (err.code === 'auth/weak-password') {
+        message = 'Senha é inválida, no mínimo 6 caracteres';
       }
 
-      if (err.code === 'auth/wrong-password') {
-        message = 'Senha Errada!';
-      }
       dropDownAlertRef.alertWithType('error', 'Erro', message);
     }
   };
@@ -72,7 +76,7 @@ const Login = () => {
       >
         <S.Logo source={LogoVertical} />
         <S.Title category="h3" status="primary">
-          Acessar
+          Cadastrar
         </S.Title>
 
         <Layout style={{ backgroundColor: 'transparent' }}>
@@ -97,22 +101,19 @@ const Login = () => {
           }}
         >
           <S.Typography uppercase color="#FFF" fSize="25px">
-            Entrar
+            Cadastre-se
           </S.Typography>
         </S.Button>
 
-        <SocialLogin />
+        <TouchableHighlight
+          onPress={() => {
+            navigation.navigate('Login');
+          }}
+        >
+          <S.Typography margin>Já é Cadastrado? Acesse Aqui</S.Typography>
+        </TouchableHighlight>
 
-        <S.BoxRow>
-          <S.Typography>Novo por aqui? </S.Typography>
-          <TouchableHighlight
-            onPress={() => {
-              navigation.navigate('Register');
-            }}
-          >
-            <S.Typography underline>Cadastre-se </S.Typography>
-          </TouchableHighlight>
-        </S.BoxRow>
+        <SocialLogin register />
       </ImageBackground>
       <DropdownAlert ref={(ref) => (dropDownAlertRef = ref)} />
     </S.Layout>
