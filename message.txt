@@ -1,0 +1,17 @@
+a) Video Pitch: Link do vídeo no YouTube de até 2 minutos na estrutura de um pitch reforçando problema, solução e tecnologia utilizada. Os vídeos com mais de 2 minutos não serão aceitos e causam a desclassificação imediata da equipe. O Vídeo só deve ser disponibilizado no Youtube, com o link do mesmo sendo enviado na plataforma Shawee. O vídeo deve ser postado como ‘Público’ ou ‘Não listado’.
+
+b) Vídeo Demo: Link do vídeo no YouTube de até 60 segundos gravando a tela e navegação da solução desenvolvida, neste vídeo não pode ser utilizado ferramentas de prototipação que não apresentem código desenvolvido. Os vídeos com mais de 60 segundos não serão aceitos e causam a desclassificação imediata da equipe. O Vídeo só deve ser disponibilizado no Youtube, com o link do mesmo sendo enviado na plataforma Shawee. O vídeo deve ser postado como ‘Público’ ou ‘Não listado’
+*c) Apresentação: No formato de slides, com estrutura de pitch contendo informações sobre o problema, sobre a solução e tecnologias utilizadas, pode-se utilizar desse material para trazer informações de mercado e roadmap futuro da solução desenvolvida. (obrigatório utilizar formato .pdf e recomendamos o formato de 10 slides).
+
+d) Link público do repositório: (disponibilizar em repositorio do github). Caso a solução utilize mais de um repositório, enviar o link de todos (limitado a 3 links no máximo). Cada link deve ter um arquivo Read com informações sobre o projeto. Recomendamos seguir as boas práticas com os commits vide: https://www.conventionalcommits.org/en/v1.0.0-beta.2/
+
+e) Link da solução: (Item opcional). Caso a solução desenvolvida esteja hospedada em um link, este pode ser disponibilizado, porém não faz parte do escopo de avaliação navegar na solução. A solução precisa ser claramente apresentada no vídeo de demonstração, item b desta cláusula. *
+
+:loudspeaker:  O total de links disponibilizados não pode ser superior a 7, sendo: 
+a) 1 (um) vídeo pitch;
+b) 1 (um) vídeo demo;
+c) 1 (um) .pdf de Apresentação; 
+d) de 1 a 3 (um a três) links de repositório público; e
+e) 1 (um) link da solução.
+
+Todos os projetos vão passar por um processo de code review qualitativo, observando conteúdo dos repositórios e o uso de boas práticas na entrega do código como descrito no regulamento. O time que não cumprir os requisitos mínimos de conter código próprio, poderá ser eliminado, cabendo a avaliação da Comissão Organizadora para tal decisão.
