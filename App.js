@@ -14,7 +14,7 @@ import Routes from './src/pages/routes';
 
 const App = () => {
   React.useEffect(() => {
-    SplashScreen.hide();
+    setTimeout(() => SplashScreen.hide(), 2000);
   }, []);
   return (
     <>
