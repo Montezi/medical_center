@@ -25,6 +25,6 @@
 
 # Participantes
 
-- Ana Medrado
-- Mirian Montenzi
-- Gabriely Carris
+- <a href="https://github.com/AnaMedrado">Ana Medrado</a>
+- <a href="https://github.com/Montezi">Mirian Montenzi</a>
+- <a href="https://github.com/gabrielycm">Gabriely Carris</a>
