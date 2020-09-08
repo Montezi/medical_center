@@ -25,4 +25,4 @@
 
 - Ana Medrado
 - Mirian Montenzi
-- Gabriely Carrisedical_talk
+- Gabriely Carris
