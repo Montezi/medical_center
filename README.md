@@ -1,9 +1,11 @@
 # Medical Talk
 
-<h3>Plataforma digital para realizar consultas e agendamentos com acessiblidade.</h3>
+<h3>Plataforma digital para realizar consultas e agendamentos com acessibilidade.</h3>
 <p>Tem como principal objetivo a digitalização do atendimento e potencializar o cuidado médico à distância e, principalmente com qualidade para pacientes com algum tipo de deficiência.</p>
 <br/>
 <p>Projeto desenvolvido durante o hackaton <b>Mega Hack Women</b> - Desafio Vitall + Unimed Fesp - Time 1</p>
+
+![Git Medical Talk](gif_medical_talk.gif) 
 
 # Tecnologias Utilizadas
 
